@@ -1,0 +1,26 @@
+q:Swap함수에서 포인트를 사용해야지 main함수에 값이 변환됐는데 우리가 저저번주 시간에 배웠던 함수를 정의에서는 포인트를 왜 사용하지 않았어?
+a:먼저 우리가 전전에 배웠던 것을 예로 들어보면
+int SumTwo(int a, int b)
+{
+    int result;
+    result=a+b;
+    return result;
+} 
+int main(void)
+{ int x=10,y=5
+  int value;
+  value=SumTwo(x,y);
+  printf("%d",value);
+  return 0;
+}  위 함수는 a,b의 값이 x,y의 값과 관계가 없고 함수의 정의로 그냥 x,y값을 대입하면 결과값이 잘 나왔는데
+ Swap함수는 값이 '변화'됨에 따라 포인트 함수를 적용해야 해 
+
+q:예제[10-8]에서 
+int SumArray(int* p, int size) {
+	int result = 0, i;
+	for (i = 0; i < size; i++)
+		result = result + p[i];
+	return result;
+} 이렇게 우리가 SumArray함수를 만들었는데 p[i]말고 *(p+i)로 해야하는거 아니야?
+a:먼저 배열과 포인트 관계에서 주소를 표현하는 방법은 &a[0],a,p가 있고 값을 표현하는 방법은 a[0],*a,*p, p[0] 이렇게 있어
+때문에 p[i]와 *(p+i)e
